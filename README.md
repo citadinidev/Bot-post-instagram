@@ -4,4 +4,4 @@ Este é um exemplo de como usar a API oficial do Instagram para postar imagens n
 
 ## Código de Exemplo
 
-[Leia a documentação oficial:] (https://developers.facebook.com/docs/instagram-platform/instagram-api-with-facebook-login/content-publishing)
+[Leia a documentação oficial:](https://developers.facebook.com/docs/instagram-platform/instagram-api-with-facebook-login/content-publishing)
