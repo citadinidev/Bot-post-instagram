@@ -7,7 +7,7 @@ const instagramAccountId = "INSTAGRAM_ACCOUNT_ID"; // ID DA SUA PÁGINA DO INSTA
 uploadMedia("https://placehold.co/512", "Aqui está uma descrição para a imagem!", false); // uploadMedia("URL DA IMAGEM", "DESCRIÇÃO DA IMAGEM", TRUE = POSTAR NOS STORIES; FALSE = POSTAR NO FEED)
 
 
-async function uploadMedia(mediaUrl, caption, isStory) {
+async function uploadMedia(mediaUrl, caption, isStories) {
     try {
         const apiUrlBase = `https://graph.facebook.com/v20.0/${instagramAccountId}`
 
@@ -19,7 +19,7 @@ async function uploadMedia(mediaUrl, caption, isStory) {
                 },
                 {
                     params: {
-                        media_type: isStory ? "STORIES" : "",
+                        media_type: isStories ? "STORIES" : "",
                         access_token: pageAccessToken,
                     },
                 }
