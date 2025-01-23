@@ -1,4 +1,4 @@
-# Exemplo: Usando a API Oficial do Instagram
+# Exemplo simples usando a API Oficial do Instagram
 
 Este é um exemplo de como usar a API oficial do Instagram para postar imagens no **Feed** ou nos **Stories**.
 
