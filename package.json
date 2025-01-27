@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/citadinidev/Bot-post-instagram#readme",
   "dependencies": {
-    "axios": "^1.7.9"
+    "axios": "^1.7.9",
+    "futurecall": "^1.0.1"
   }
 }
