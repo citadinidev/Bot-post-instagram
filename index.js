@@ -1,11 +1,21 @@
 
 const axios = require('axios');
+const FutureCall = require('futurecall');
+
+const futureCall = new FutureCall();
 
 const pageAccessToken = "PAGE_ACCESS_TOKEN"; // TOKEN GERADO PARA A API: https://developers.facebook.com/docs/instagram-platform/instagram-api-with-facebook-login/content-publishing
 const instagramAccountId = "INSTAGRAM_ACCOUNT_ID"; // ID DA SUA PÁGINA DO INSTAGRAM (A PÁGINA PRECISA SER UMA "CONTA COMERCIAL DO INSTAGRAM"). MAIS DETALHES NO LINK ACIMA
 
-uploadMedia("https://placehold.co/512", "Aqui está uma descrição para a imagem!", false); // uploadMedia("URL DA IMAGEM", "DESCRIÇÃO DA IMAGEM", TRUE = POSTAR NOS STORIES; FALSE = POSTAR NO FEED)
 
+// uploadMedia("URL DA IMAGEM", "DESCRIÇÃO DA IMAGEM", TRUE = POSTAR NOS STORIES; FALSE = POSTAR NO FEED)
+const taskId = futureCall.newcall(uploadMedia("https://placehold.co/512", "Aqui está uma descrição para a imagem!", false), {
+    interval: '02:00:00',
+    startTime: '07:00:00',
+    endTime: '22:00:00',
+    days: [0, 1, 1, 1, 1, 1, 0], 
+    timezone: 'America/New_York'
+  });
 
 async function uploadMedia(mediaUrl, caption, isStories) {
     try {
